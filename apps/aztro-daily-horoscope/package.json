@@ -9,6 +9,19 @@
     "react-native": "*",
     "react-native-config": "*",
     "react-native-svg": "*",
-    "@react-native-async-storage/async-storage": "*"
+    "@react-native-async-storage/async-storage": "*",
+    "metro-config": "*",
+    "@rneui/base": "*",
+    "react-native-vector-icons": "*",
+    "react-native-safe-area-context": "*",
+    "@reduxjs/toolkit": "*",
+    "redux-logger": "*",
+    "react-redux": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/stack": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "*",
+    "react-native-screens": "*",
+    "react-native-style-tachyons": "*"
   }
 }

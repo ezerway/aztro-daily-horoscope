@@ -19,6 +19,9 @@
     },
     "lint": {
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+    },
+    "e2e": {
+      "inputs": ["default", "^production"]
     }
   },
   "namedInputs": {
@@ -31,5 +34,22 @@
       "!{projectRoot}/.eslintrc.json"
     ],
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "bundler": "webpack",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
   }
 }
