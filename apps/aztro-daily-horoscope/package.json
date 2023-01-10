@@ -22,6 +22,8 @@
     "react-native-gesture-handler": "*",
     "react-native-reanimated": "*",
     "react-native-screens": "*",
-    "react-native-style-tachyons": "*"
+    "react-native-style-tachyons": "*",
+    "@rneui/themed": "*",
+    "react-native-app-auth": "*"
   }
 }

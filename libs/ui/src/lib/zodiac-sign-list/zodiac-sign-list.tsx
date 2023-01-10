@@ -6,7 +6,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import { ListItem } from '@rneui/base';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { mapDispathToProps, ZodiacSignListProps } from './zodiac-sign-list.props';
 import { useNavigation } from '@react-navigation/native';
 

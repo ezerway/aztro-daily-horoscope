@@ -7,7 +7,7 @@ import {
   PayloadAction,
 } from '@reduxjs/toolkit';
 import { AdhHoroscope, AdhHoroscopeDay, AdhZodiacSign, AdhZodiacSignItem } from '@aztro-daily-horoscope/models';
-import { transfromAztroHoroscpeResponseToAdhHoroscope, aztroService } from '@aztro-daily-horoscope/services';
+import { transfromAztroHoroscpeResponseToAdhHoroscope, aztroService, AztroHoroscpeResponse } from '@aztro-daily-horoscope/services';
 import { LoadingStatus, LoadingStatusEnum } from '../models/loading-status.type';
 
 export const HOROSCOPE_FEATURE_KEY = 'horoscope';
@@ -49,7 +49,7 @@ export const fetchHoroscope = createAsyncThunk<AdhHoroscope, { zodiacSign: AdhZo
   'horoscope/fetchStatus',
   async ({ zodiacSign, day }, { rejectWithValue }) => {
     try {
-      const horoscopeResponse = await aztroService.getHoroscope(zodiacSign, day);
+      const horoscopeResponse: AztroHoroscpeResponse = await aztroService.getHoroscope(zodiacSign, day);
       return transfromAztroHoroscpeResponseToAdhHoroscope(horoscopeResponse);
     } catch (error) {
       return rejectWithValue({ error })

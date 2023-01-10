@@ -1,6 +1,7 @@
 import { AdhHoroscope, AdhZodiacSign } from '@aztro-daily-horoscope/models';
 
 export interface AztroHoroscpeResponse {
+  id: string;
   date_range: string;
   current_date: string;
   description: string;
@@ -15,7 +16,8 @@ export function transfromAztroHoroscpeResponseToAdhHoroscope(
   responose: AztroHoroscpeResponse
 ): AdhHoroscope {
   return {
-    currentDate: new Date(responose.current_date),
+    id: responose.compatibility,
+    currentDate: responose.current_date,
     description: responose.description,
     compatibility: responose.compatibility as AdhZodiacSign,
     mood: responose.mood,

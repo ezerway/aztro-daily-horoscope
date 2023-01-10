@@ -1,4 +1,4 @@
-import { AnyAction, Dispatch, ThunkDispatch } from "@reduxjs/toolkit";
+import { AnyAction, ThunkDispatch } from "@reduxjs/toolkit";
 import { horoscopeActions, RootState, horoscopeSelectors } from "@aztro-daily-horoscope/store";
 import { AdhHoroscopeDay, AdhZodiacSign } from "@aztro-daily-horoscope/models";
 
